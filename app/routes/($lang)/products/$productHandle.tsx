@@ -6,7 +6,7 @@ import {
   Await,
   useSearchParams,
   useLocation,
-  useTransition,
+  useNavigation,
 } from '@remix-run/react';
 
 import {
@@ -183,7 +183,7 @@ export function ProductForm() {
   const {product, analytics, storeDomain} = useLoaderData<typeof loader>();
 
   const [currentSearchParams] = useSearchParams();
-  const transition = useTransition();
+  const transition = useNavigation();
 
   /**
    * We update `searchParams` with in-flight request data from `transition` (if available)

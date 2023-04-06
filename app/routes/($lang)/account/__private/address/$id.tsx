@@ -4,7 +4,7 @@ import {
   useActionData,
   useOutletContext,
   useParams,
-  useTransition,
+  useNavigation,
 } from '@remix-run/react';
 import {flattenConnection} from '@shopify/hydrogen';
 import type {
@@ -144,7 +144,7 @@ export default function EditAddress() {
   const {id: addressId} = useParams();
   const isNewAddress = addressId === 'add';
   const actionData = useActionData<ActionData>();
-  const transition = useTransition();
+  const transition = useNavigation();
   const {customer} = useOutletContext<AccountOutletContext>();
   const addresses = flattenConnection(customer.addresses);
   const defaultAddress = customer.defaultAddress;
