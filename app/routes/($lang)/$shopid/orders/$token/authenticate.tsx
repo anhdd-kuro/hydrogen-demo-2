@@ -24,6 +24,7 @@ export async function loader({request, context: {storefront}}: LoaderArgs) {
 export default function () {
   return null;
 }
+
 export function ErrorBoundary() {
   return (
     <PageHeader

@@ -3,7 +3,7 @@ import {
   useActionData,
   Form,
   useOutletContext,
-  useTransition,
+  useNavigation,
 } from '@remix-run/react';
 import type {
   Customer,
@@ -128,7 +128,7 @@ export const action: ActionFunction = async ({request, context, params}) => {
 export default function AccountDetailsEdit() {
   const actionData = useActionData<ActionData>();
   const {customer} = useOutletContext<AccountOutletContext>();
-  const transition = useTransition();
+  const transition = useNavigation();
 
   return (
     <>
